@@ -1,0 +1,11 @@
+game:GetService("Players").LocalPlayer.Idled:Connect(function()
+  game:GetService("VirtualUser"):CaptureController()
+  game:GetService("VirtualUser"):ClickButton2(Vector2.new())
+end)
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+  Title = "Virtual User";
+  Text = "You are now free to AFK.";
+  Icon = "rbxassetid://11953886819";
+  Duration = 5;
+})
